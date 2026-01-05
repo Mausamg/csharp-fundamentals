@@ -42,9 +42,31 @@ namespace MyFirstProject
             //Text Based Data Types
             string name = "MausamG";
             char grade = 'A';
-            Console.Write("Name: " + name + ", Grade: " + grade);
+            Console.WriteLine("Name: " + name + ", Grade: " + grade);
 
+            string textAge= "21";
+            int agenum= Convert.ToInt32(textAge);
+            Console.WriteLine(agenum);
 
+            string textBigNumber= "12345678901234";
+            long bigNum= Convert.ToInt64(textBigNumber);
+            Console.WriteLine(bigNum);
+
+            string textNegative= "-3.14";
+            double negNum= Convert.ToDouble(textNegative);
+            Console.WriteLine(negNum);
+
+            string textPrecision= "19.99";
+            float piNum= Convert.ToSingle(textPrecision);
+            Console.WriteLine(piNum);
+
+            string textMoney= "19.99";
+            decimal moneyNum= Convert.ToDecimal(textMoney);
+            Console.WriteLine(moneyNum);
+
+            bool isMale= true;
+            bool isAdult= false;
+            Console.WriteLine("Is Male: " + isMale + ", Is Adult: " + isAdult);
             Console.ReadLine();
         }
     }
