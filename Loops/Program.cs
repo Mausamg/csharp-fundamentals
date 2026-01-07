@@ -36,9 +36,52 @@ namespace Loops
             else { 
                 for (int i = 0; i < times; i++)
                 {
-                    Console.WriteLine((i + 1) + " Hi");
+                    Console.WriteLine((i + 1) + " for loop");
                 }
         }
+
+            Console.WriteLine("Enter first numsber :");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number :");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            int multiplication=num1 * num2;
+            //implementation of for loop 
+            Console.WriteLine("What is the multiplication of {0}*{1}:",num1,num2);
+            int attempt= 1, maxAttempts=5;
+
+                while (attempt <= maxAttempts)
+                {
+                    int userAnswer = Convert.ToInt32(Console.ReadLine());
+
+                    if (userAnswer == multiplication)
+                    {
+                        Console.WriteLine("Wow, Correct Answer!");
+                        break;
+                    }
+                    else if (attempt == maxAttempts)
+                    {
+                        Console.WriteLine(
+                            "Sorry, you have used all your attempts. The correct answer is {0}",
+                            multiplication
+                        );
+                    }
+                    else
+                    {
+                        Console.WriteLine(
+                            "Incorrect Answer. You have {0} attempts left. Try again.",
+                            maxAttempts - attempt
+                        );
+                    }
+
+                    attempt++;
+                }
+
+                Console.WriteLine("Enter your age :");
+                int age = Convert.ToInt32(Console.ReadLine());
+                string result= age>=18?" You are eligible to vote":" You are not eligible to vote";
+                Console.WriteLine(result);
+            Console.ReadLine();
         }
     }
 }
