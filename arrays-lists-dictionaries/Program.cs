@@ -32,61 +32,82 @@ namespace arrays_lists_dictionaries
             //     Console.Write($"{j}");
             // }
 
-            int sum = 0;
-            int[] angles = new int[3];
-            for (int i = 0; i < angles.Length; i++)
+            //int sum = 0;
+            //int[] angles = new int[3];
+            //for (int i = 0; i < angles.Length; i++)
+            //{
+            //    Console.WriteLine($"Enter the  angle {i + 1}:");
+            //    angles[i] = Convert.ToInt32(Console.ReadLine());
+            //    sum += angles[i];
+            //}
+            //Console.WriteLine("The sum of angles is : " + sum);
+            //if (angles.Length != 0)
+            //{
+            //    if (sum == 180)
+            //    {
+            //        Console.WriteLine("The angles  form a triangle");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Invalid, The total sum of angles must be 180.");
+
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The angles doesnot form a triangle");
+            //}
+
+            ////Array Sorting
+            //Array.Sort(angles);
+            //Console.WriteLine("The sorted angles are : ");
+            //foreach (int i in angles)
+            //{
+            //    Console.Write($"{i} ");
+
+            //}
+
+
+            ////Array Reverse
+            ////Array.Reverse(angles);
+            //Console.Write("\n The reversed angles are : ");
+            //foreach (int i in angles)
+            //{
+            //    Console.Write($"{i} ");
+            //}
+
+            //Console.WriteLine("\nEnter a number to search :");
+            //int search = Convert.ToInt32(Console.ReadLine());
+
+            //int position= Array.IndexOf(angles, search,1,2);
+            //if (position > -1)
+            //{
+            //    Console.WriteLine($"The {search} number has been found in postion{position + 1}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{search} not found");
+            //}
+
+
+            //Lists in C#
+            int[] numbers1 = new int[4]
             {
-                Console.WriteLine($"Enter the  angle {i + 1}:");
-                angles[i] = Convert.ToInt32(Console.ReadLine());
-                sum += angles[i];
+                1, 2, 3,4
+            };
+            //numbers1[0] = 1;
+            //numbers1[1] = 2;
+            //numbers1[2] = 3;
+            List<int> num1 = new List<int>();
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("Enter the element {0} : ", i + 1);
+                num1.Add(Convert.ToInt32(Console.ReadLine()));
             }
-            Console.WriteLine("The sum of angles is : " + sum);
-            if (angles.Length != 0)
+            Console.WriteLine("List Element");
+            for (int i = 0; i < num1.Count; i++)
             {
-                if (sum == 180)
-                {
-                    Console.WriteLine("The angles  form a triangle");
-                }
-                else
-                {
-                    Console.WriteLine("Invalid, The total sum of angles must be 180.");
-
-                }
-            }
-            else
-            {
-                Console.WriteLine("The angles doesnot form a triangle");
-            }
-
-            //Array Sorting
-            Array.Sort(angles);
-            Console.WriteLine("The sorted angles are : ");
-            foreach (int i in angles)
-            {
-                Console.Write($"{i} ");
-
-            }
-
-
-            //Array Reverse
-            //Array.Reverse(angles);
-            Console.Write("\n The reversed angles are : ");
-            foreach (int i in angles)
-            {
-                Console.Write($"{i} ");
-            }
-
-            Console.WriteLine("\nEnter a number to search :");
-            int search = Convert.ToInt32(Console.ReadLine());
-
-            int position= Array.IndexOf(angles, search,1,2);
-            if (position > -1)
-            {
-                Console.WriteLine($"The {search} number has been found in postion{position + 1}");
-            }
-            else
-            {
-                Console.WriteLine($"{search} not found");
+                Console.Write(num1[i]);
             }
         }
     }
