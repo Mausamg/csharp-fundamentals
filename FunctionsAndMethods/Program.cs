@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,37 +10,37 @@ namespace FunctionsAndMethods
 {
     class Test
     {
-        public  static void SampleMethod()
+        public static void SampleMethod()
         {
             Console.WriteLine("This is a sample method in Test class.");
         }
     }
 
 
-        internal class Program
+    internal class Program
+    {
+        static void ExampleMethod()
         {
-            static void ExampleMethod()
-            {
-                Console.WriteLine("This is an example method.");
-            }
+            Console.WriteLine("This is an example method.");
+        }
 
         static void PrintArray()
         {
             Console.WriteLine("Enter the size of array : ");
             int num = Convert.ToInt32(Console.ReadLine());
             int[] arrayNum = new int[num];
-            
-            for(int i=0;i<num;i++)
+
+            for (int i = 0; i < num; i++)
             {
                 Console.WriteLine($"Enter the {i + 1} array elememt :");
                 arrayNum[i] = Convert.ToInt32(Console.ReadLine());
-                
+
             }
             int counter = 0;
             Console.WriteLine("Using foreach loop: ");
             foreach (int n in arrayNum)
             {
-                Console.WriteLine($"The array element {counter+1} is : {n}");
+                Console.WriteLine($"The array element {counter + 1} is : {n}");
                 counter++;
             }
 
@@ -60,22 +61,49 @@ namespace FunctionsAndMethods
             return 21;
         }
 
-            static void Main(string[] args)
-            {
-                ExampleMethod();
-                
-                Test.SampleMethod();
-                
+
+        //function parameter
+        static int AddNumbers(int a, int b)
+        {
+            return a + b;
+        }
+
+        static int ReadInt()
+        {
+            Console.WriteLine("Enter two numbers to add: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            return AddNumbers(num1, num2);
+        }
+
+        static int Add(int a, [Optional] int b)
+        {
+            return a + b;
+        }
+        static void Main(string[] args)
+        {
+            ExampleMethod();
+
+            Test.SampleMethod();
+
             bool success = int.TryParse("123", out int result);
             Console.WriteLine(result);
             Console.WriteLine(success);
 
             //PrintArray();
-            Console.Title= $"{MyName()} - {MyAge()}";
-            string output=$"Hello, My name is {MyName()} and I am {MyAge()} years old.";
+            Console.Title = $"{MyName()} - {MyAge()}";
+            string output = $"Hello, My name is {MyName()} and I am {MyAge()} years old.";
             Console.WriteLine(output);
-                Console.ReadLine();
-            }
+
+
+            int sum = ReadInt();
+            Console.WriteLine($"The returned sum is: {sum}");
+
+            Console.WriteLine(Add(10));
+
+            Console.ReadLine();
         }
     }
+}
 
