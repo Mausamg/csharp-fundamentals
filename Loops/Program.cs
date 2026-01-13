@@ -122,8 +122,8 @@ namespace Loops
             int tableNum = Convert.ToInt32(Console.ReadLine());
             for (int i=1; i <= 10; i++)
             {
-                int num = tableNum * i;
-                Console.WriteLine("{0} x {1} = {2}", tableNum, i, num);
+                int numm = tableNum * i;
+                Console.WriteLine("{0} x {1} = {2}", tableNum, i, numm);
             }
             Console.ReadLine();
         }
