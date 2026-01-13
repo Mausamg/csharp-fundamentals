@@ -49,7 +49,15 @@ namespace FunctionsAndMethods
             {
                 Console.WriteLine($"The array element {i + 1} is : {arrayNum[i]}");
             }
-           
+        }
+        static string MyName()
+        {
+            return "Mausam G";
+        }
+
+        static int MyAge()
+        {
+            return 21;
         }
 
             static void Main(string[] args)
@@ -62,7 +70,10 @@ namespace FunctionsAndMethods
             Console.WriteLine(result);
             Console.WriteLine(success);
 
-            PrintArray();
+            //PrintArray();
+            Console.Title= $"{MyName()} - {MyAge()}";
+            string output=$"Hello, My name is {MyName()} and I am {MyAge()} years old.";
+            Console.WriteLine(output);
                 Console.ReadLine();
             }
         }
