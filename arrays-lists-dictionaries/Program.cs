@@ -10,7 +10,7 @@ namespace arrays_lists_dictionaries
     {
         static void Main(string[] args)
         {
-            Arrays in C#
+            //Arrays in C#
              Console.WriteLine("Enter the size of Array : ");
             int i = Convert.ToInt32(Console.ReadLine());
             int[] numbers = new int[i];
