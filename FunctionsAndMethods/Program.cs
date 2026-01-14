@@ -81,6 +81,12 @@ namespace FunctionsAndMethods
         {
             return a + b;
         }
+
+        //Named Parameters
+        static void PrintDetails(string name, int age, string address)
+        {
+            Console.WriteLine($"Name: {name}, Age: {age}, Address: {address}");
+        }
         static void Main(string[] args)
         {
             ExampleMethod();
@@ -101,6 +107,8 @@ namespace FunctionsAndMethods
             Console.WriteLine($"The returned sum is: {sum}");
 
             Console.WriteLine(Add(10));
+
+            PrintDetails("Mausam", 21,"KTM");
 
             Console.ReadLine();
         }
