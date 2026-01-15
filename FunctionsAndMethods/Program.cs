@@ -67,6 +67,10 @@ namespace FunctionsAndMethods
         {
             return a + b;
         }
+        static int MultNumbers(int a, int b)
+        {
+            return a * b;
+        }
 
         static int ReadInt()
         {
@@ -87,6 +91,8 @@ namespace FunctionsAndMethods
         {
             Console.WriteLine($"Name: {name}, Age: {age}, Address: {address}");
         }
+
+        
         static void Main(string[] args)
         {
             ExampleMethod();
@@ -107,6 +113,7 @@ namespace FunctionsAndMethods
             Console.WriteLine($"The returned sum is: {sum}");
 
             Console.WriteLine(Add(10));
+            Console.WriteLine(MultNumbers(sum, 10));
 
             PrintDetails("Mausam", 21,"KTM");
 
