@@ -100,13 +100,18 @@ namespace FunctionsAndMethods
         }
 
 
-        //Pass by reference
+        
         static int Assign( )
         {
             return 20;
             
         }
 
+        //Pass by reference
+        static void PassAssign(ref int number)
+        {
+            number = 10;
+        }
         static bool findItem(string s, List<string> list, out int index)
         {
             index = -1;
@@ -165,6 +170,10 @@ namespace FunctionsAndMethods
             int numm = 0;
             numm=Assign();
             Console.WriteLine(numm);
+
+            int number = 0;
+            PassAssign(ref number);
+            Console.WriteLine(number);
 
             Console.ReadLine();
         }
