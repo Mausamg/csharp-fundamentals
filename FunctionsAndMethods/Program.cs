@@ -99,6 +99,14 @@ namespace FunctionsAndMethods
             return true;
         }
 
+
+        //Pass by reference
+        static int Assign( )
+        {
+            return 20;
+            
+        }
+
         static bool findItem(string s, List<string> list, out int index)
         {
             index = -1;
@@ -152,7 +160,12 @@ namespace FunctionsAndMethods
                 "Coffee","Milk"
             };
             Console.WriteLine(shoppingList.IndexOf("Milk"));
-            Console.WriteLine("List item"+findItem("coffeer", shoppingList, out int index));
+            Console.WriteLine("List item"+findItem("co", shoppingList, out int index));
+
+            int numm = 0;
+            numm=Assign();
+            Console.WriteLine(numm);
+
             Console.ReadLine();
         }
     }
