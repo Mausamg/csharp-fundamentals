@@ -128,7 +128,7 @@ namespace FunctionsAndMethods
         }
         static void Main(string[] args)
         {
-            //ExampleMethod();
+            ExampleMethod();
 
             Test.SampleMethod();
 
@@ -136,7 +136,7 @@ namespace FunctionsAndMethods
             Console.WriteLine(result);
             Console.WriteLine(success);
 
-            //PrintArray();
+            PrintArray();
             Console.Title = $"{MyName()} - {MyAge()}";
             string output = $"Hello, My name is {MyName()} and I am {MyAge()} years old.";
             Console.WriteLine(output);
