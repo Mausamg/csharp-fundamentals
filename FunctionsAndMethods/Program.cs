@@ -165,7 +165,7 @@ namespace FunctionsAndMethods
                 "Coffee","Milk"
             };
             Console.WriteLine(shoppingList.IndexOf("Milk"));
-            Console.WriteLine("List item"+findItem("co", shoppingList, out int index));
+            Console.WriteLine("List item"+findItem("coffee", shoppingList, out int index));
 
             int numm = 0;
             numm=Assign();
