@@ -92,10 +92,35 @@ namespace FunctionsAndMethods
             Console.WriteLine($"Name: {name}, Age: {age}, Address: {address}");
         }
 
-        
+        //Out Parameter 
+        static bool testOut(out int num)
+        {
+            num = 5;
+            return true;
+        }
+
+        static bool findItem(string s, List<string> list, out int index)
+        {
+            index = -1;
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].ToLower().Equals(s.ToLower()))
+                {
+                    index = i;
+                    return true;
+                }
+                
+            }
+            return false;
+        }
+        static bool TryParse(string s, out int result)
+        {
+            result = 0;
+            return false;
+        }
         static void Main(string[] args)
         {
-            ExampleMethod();
+            //ExampleMethod();
 
             Test.SampleMethod();
 
@@ -117,6 +142,17 @@ namespace FunctionsAndMethods
 
             PrintDetails("Mausam", 21,"KTM");
 
+            int n = 0;
+            bool success2=testOut(out n);
+            Console.WriteLine(n+" "+success2);
+            //int.TryParse("456", out int result2);
+
+            List<string> shoppingList = new List<string>
+            {
+                "Coffee","Milk"
+            };
+            Console.WriteLine(shoppingList.IndexOf("Milk"));
+            Console.WriteLine("List item"+findItem("coffeer", shoppingList, out int index));
             Console.ReadLine();
         }
     }
