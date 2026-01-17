@@ -64,7 +64,7 @@ namespace Function_exercise
                 Console.WriteLine($"Enter {i+1} Array element :");
                 numbers[i]=Convert.ToInt32(Console.ReadLine());
             }
-            int result=SumArray(numbers);
+        
             if (SumArray(numbers, out int total))
             {
                 Console.WriteLine("The total sum of Array elements is " + total);
