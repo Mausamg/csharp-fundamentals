@@ -10,6 +10,27 @@ namespace Exception_handling
     {
         static void Main(string[] args)
         {
+            //System.FormatException
+            //System.OverflowException
+            try
+            {
+            Console.WriteLine("Enter a number :");
+            int num =Convert.ToInt32(Console.ReadLine());
+
+            }
+            catch (System.OverflowException)
+            {
+                Console.WriteLine("Please Enter the value less than 2 billion!");
+            }
+            catch (System.FormatException)
+            {
+                Console.WriteLine("Please Enter the valid number!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Some other exception occured : " + ex.Message);
+            }
+
         }
     }
 }
