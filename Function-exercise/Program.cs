@@ -25,9 +25,49 @@ namespace Function_exercise
 
             AreaTriangle(len, bre);
         }
+
+        static int Array(int[] numbers)
+        {
+            if (numbers.Length > 0)
+            {
+            int total = 0;
+            foreach (int number in numbers)
+            {
+                total += number;
+            }
+                return total;
+            }
+            return -1;
+        }
+
+        static void ReadArray()
+        {
+            Console.WriteLine("Enter the size of the Array :");
+            int size=Convert.ToInt32(Console.ReadLine());
+
+            int[] numbers = new int[size];
+            for(int i = 0; i < size; i++)
+            {
+                Console.WriteLine($"Enter {i+1} Array element :");
+                numbers[i]=Convert.ToInt32(Console.ReadLine());
+            }
+            int result=Array(numbers);
+            if (result > -1)
+            {
+                Console.WriteLine("The total sum of Array elements is " + Array(numbers));
+
+            }
+            else
+            {
+                Console.WriteLine("We cannot add the empty Array.");
+            }
+        }
         static void Main(string[] args)
         {
-            ReadTriangle();
+            //ReadTriangle();
+            ReadArray();
         }
+        
+
     }
 }
