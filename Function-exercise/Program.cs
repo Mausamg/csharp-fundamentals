@@ -26,18 +26,31 @@ namespace Function_exercise
             AreaTriangle(len, bre);
         }
 
-        static int Array(int[] numbers)
+        static int SumArray(int[] numbers)
         {
             if (numbers.Length > 0)
             {
             int total = 0;
+                foreach (int number in numbers)
+                {
+                    total += number;
+                }
+                return total;
+            }
+            return -1;
+        }
+        static bool SumArray(int[] numbers, out int total)
+        {
+            total = 0;
+            if (numbers.Length > 0)
+            {
             foreach (int number in numbers)
             {
                 total += number;
             }
-                return total;
+                return true;
             }
-            return -1;
+            return false;
         }
 
         static void ReadArray()
@@ -51,10 +64,10 @@ namespace Function_exercise
                 Console.WriteLine($"Enter {i+1} Array element :");
                 numbers[i]=Convert.ToInt32(Console.ReadLine());
             }
-            int result=Array(numbers);
-            if (result > -1)
+            int result=SumArray(numbers);
+            if (SumArray(numbers, out int total))
             {
-                Console.WriteLine("The total sum of Array elements is " + Array(numbers));
+                Console.WriteLine("The total sum of Array elements is " + total);
 
             }
             else
