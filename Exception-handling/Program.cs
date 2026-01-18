@@ -38,12 +38,12 @@ namespace Exception_handling
             //}
             //    Console.WriteLine("Good Bye!");
             Console.WriteLine("Enter a number :");
-            if(int.TryParse(Console.ReadLine(), out int result)){
+            if(TryParse(Console.ReadLine(), out int result)){
                 Console.WriteLine("Yeaaa! "+result);
             }
             else
             {
-                Console.WriteLine("Oops!");
+                 Console.WriteLine("Oops!");
             }
 
         }
