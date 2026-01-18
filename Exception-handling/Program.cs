@@ -12,11 +12,16 @@ namespace Exception_handling
         {
             //System.FormatException
             //System.OverflowException
+            bool looping = true;
+
+            while (looping)
+            {
             try
             {
             Console.WriteLine("Enter a number :");
             int num =Convert.ToInt32(Console.ReadLine());
-
+                Console.WriteLine(num);
+                    looping =false;
             }
             catch (System.OverflowException)
             {
@@ -30,6 +35,8 @@ namespace Exception_handling
             {
                 Console.WriteLine("Some other exception occured : " + ex.Message);
             }
+            }
+                Console.WriteLine("Good Bye!");
 
         }
     }
