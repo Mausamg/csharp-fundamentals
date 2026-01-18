@@ -12,32 +12,52 @@ namespace Exception_handling
         {
             //System.FormatException
             //System.OverflowException
-            bool looping = true;
+            //bool looping = true;
 
-            while (looping)
+            //while (looping)
+            //{
+            //try
+            //{
+            //Console.WriteLine("Enter a number :");
+            //int num =Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine(num);
+            //        looping =false;
+            //}
+            //catch (System.OverflowException)
+            //{
+            //    Console.WriteLine("Please Enter the value less than 2 billion!");
+            //}
+            //catch (System.FormatException)
+            //{
+            //    Console.WriteLine("Please Enter the valid number!");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Some other exception occured : " + ex.Message);
+            //}
+            //}
+            //    Console.WriteLine("Good Bye!");
+            Console.WriteLine("Enter a number :");
+            if(int.TryParse(Console.ReadLine(), out int result)){
+                Console.WriteLine("Yeaaa! "+result);
+            }
+            else
             {
+                Console.WriteLine("Oops!");
+            }
+
+        }
+        static bool TryParse(string input, out int result)
+        {
+            result = -1;
             try
             {
-            Console.WriteLine("Enter a number :");
-            int num =Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(num);
-                    looping =false;
+                result = Convert.ToInt32(input);
+                return true;
             }
-            catch (System.OverflowException)
-            {
-                Console.WriteLine("Please Enter the value less than 2 billion!");
+            catch (Exception) { 
+                return false;
             }
-            catch (System.FormatException)
-            {
-                Console.WriteLine("Please Enter the valid number!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Some other exception occured : " + ex.Message);
-            }
-            }
-                Console.WriteLine("Good Bye!");
-
         }
     }
 }
